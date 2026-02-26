@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Studio</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Recipe Studio</h1>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('recipes')">Recipes</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>Welcome to Recipe Studio</h1>
+                <p>Discover, cook, and enjoy delicious recipes with our interactive Story Mode.</p>
+                <button class="cta-button" onclick="showPage('recipes')">Browse Recipes</button>
+            </div>
+            <div class="featured-recipe">
+                <h2>Featured Recipe</h2>
+                <div class="recipe-card" onclick="showRecipeDetail(0)">
+                    <img src="https://via.placeholder.com/300x200?text=Featured+Recipe" alt="Featured Recipe">
+                    <h3>Classic Spaghetti Carbonara</h3>
+                    <p>A traditional Italian pasta dish that's quick and delicious.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipes List -->
+        <section id="recipes" class="page">
+            <h1>Recipes</h1>
+            <div class="recipe-grid" id="recipeGrid">
+                <!-- Recipes will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Recipe Detail -->
+        <section id="recipe-detail" class="page">
+            <div id="recipeDetailContent">
+                <!-- Recipe details will be populated by JavaScript -->
+            </div>
+            <button class="cta-button" onclick="startStoryMode()">Start Story Mode</button>
+            <button class="favorite-btn" id="favoriteBtn" onclick="toggleFavorite()">Add to Favorites</button>
+        </section>
+
+        <!-- Story Mode -->
+        <section id="story-mode" class="page">
+            <div id="storyContent">
+                <!-- Story mode content will be populated by JavaScript -->
+            </div>
+            <div class="story-navigation">
+                <button id="prevStep" onclick="prevStep()">Previous</button>
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                <button id="nextStep" onclick="nextStep()">Next</button>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <h1>About Recipe Studio</h1>
+            <p>Recipe Studio is your go-to platform for discovering and cooking delicious recipes. Our interactive Story Mode makes cooking fun and engaging by guiding you through each step like a story.</p>
+            <h2>Developers</h2>
+            <div class="developer-bios">
+                <div class="bio">
+                    <h3>Chef AI</h3>
+                    <p>Expert in creating interactive cooking experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <h1>Contact Us</h1>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
