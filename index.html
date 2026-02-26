@@ -19,6 +19,7 @@
             <ul class="nav-links">
                 <li><a href="#" onclick="showPage('home')">Home</a></li>
                 <li><a href="#" onclick="showPage('recipes')">Recipes</a></li>
+                <li><a href="#" onclick="showPage('favorites')">Favorites</a></li>
                 <li><a href="#" onclick="showPage('about')">About</a></li>
                 <li><a href="#" onclick="showPage('contact')">Contact</a></li>
             </ul>
@@ -60,6 +61,18 @@
             <h1>Recipes</h1>
             <div class="recipe-grid" id="recipeGrid">
                 <!-- Recipes will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Favorites Page -->
+        <section id="favorites" class="page">
+            <h1>Your Favorite Recipes</h1>
+            <div class="recipe-grid" id="favoritesGrid">
+                <!-- Favorite recipes will be populated by JavaScript -->
+            </div>
+            <div id="noFavorites" class="no-favorites">
+                <p>You haven't added any favorite recipes yet. Browse our recipes and add some to your favorites!</p>
+                <button class="cta-button" onclick="showPage('recipes')">Browse Recipes</button>
             </div>
         </section>
 

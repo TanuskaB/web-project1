@@ -95,6 +95,8 @@ function showPage(pageId) {
 
     if (pageId === 'recipes') {
         displayRecipes();
+    } else if (pageId === 'favorites') {
+        displayFavorites();
     }
 }
 
@@ -134,6 +136,29 @@ function displayRecipes() {
             ${favorites.includes(recipe.id) ? '<span class="favorite-indicator">★</span>' : ''}
         </div>
     `).join('');
+}
+
+function displayFavorites() {
+    const grid = document.getElementById('favoritesGrid');
+    const noFavorites = document.getElementById('noFavorites');
+    
+    const favoriteRecipes = recipes.filter(recipe => favorites.includes(recipe.id));
+    
+    if (favoriteRecipes.length === 0) {
+        grid.style.display = 'none';
+        noFavorites.style.display = 'block';
+    } else {
+        grid.style.display = 'grid';
+        noFavorites.style.display = 'none';
+        grid.innerHTML = favoriteRecipes.map(recipe => `
+            <div class="recipe-card" onclick="showRecipeDetail(${recipe.id})">
+                <img src="${recipe.image}" alt="${recipe.title}">
+                <h3>${recipe.title}</h3>
+                <p>${recipe.description}</p>
+                <span class="favorite-indicator">★</span>
+            </div>
+        `).join('');
+    }
 }
 
 // Story Mode
@@ -193,6 +218,9 @@ function toggleFavorite() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoriteButton();
     displayRecipes(); // Update the recipes list to show favorite indicators
+    if (currentPage === 'favorites') {
+        displayFavorites(); // Update favorites page if currently viewing it
+    }
 }
 
 function updateFavoriteButton() {
