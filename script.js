@@ -1,9 +1,9 @@
-// Sample recipe data
 const recipes = [
     {
         id: 0,
         title: "Classic Spaghetti Carbonara",
-        image: "https://via.placeholder.com/300x200?text=Spaghetti+Carbonara",
+        image: "image/spaghetti_carbonara.png",
+        imageAlt: "Spaghetti Carbonara",
         description: "A traditional Italian pasta dish that's quick and delicious.",
         ingredients: [
             "200g spaghetti",
@@ -26,7 +26,8 @@ const recipes = [
     {
         id: 1,
         title: "Chicken Stir-Fry",
-        image: "https://via.placeholder.com/300x200?text=Chicken+Stir-Fry",
+        image: "image/chicken_stirfry.png",
+        imageAlt: "Chicken Stir-Fry",
         description: "A quick and healthy Asian-inspired dish.",
         ingredients: [
             "400g chicken breast, sliced",
@@ -50,7 +51,8 @@ const recipes = [
     {
         id: 2,
         title: "Chocolate Chip Cookies",
-        image: "https://via.placeholder.com/300x200?text=Chocolate+Chip+Cookies",
+        image: "image/choco_cookies.png",
+        imageAlt: "Chocolate Chip Cookies",
         description: "Classic homemade cookies that are soft and chewy.",
         ingredients: [
             "2 1/4 cups all-purpose flour",
