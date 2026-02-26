@@ -74,7 +74,7 @@ h1, h2, h3 {
 .hero {
     text-align: center;
     background: linear-gradient(135deg, pink 0%, rgb(231, 226, 129) 100%);
-    color: white;
+    color: black;
     padding: 64px 32px;
     border-radius: 10px;
     margin-bottom: 32px;
@@ -286,6 +286,16 @@ h1, h2, h3 {
 #contactForm button:hover {
     background-color: #c0392b;
 }
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, pink 0%, rgb(231, 226, 129) 100%);
+    color: black;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
