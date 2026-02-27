@@ -21,6 +21,15 @@ const recipes = [
             "Mix pasta with pancetta, then add egg mixture off heat.",
             "Add reserved pasta water if needed for creaminess.",
             "Season with black pepper and serve immediately."
+        ],
+        stepImages: [
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png"
         ]
     },
     {
@@ -46,6 +55,15 @@ const recipes = [
             "Cook for another 2 minutes until vegetables are tender-crisp.",
             "Season with salt and pepper to taste.",
             "Serve hot with rice."
+        ],
+        stepImages: [
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png"
         ]
     },
     {
@@ -75,6 +93,17 @@ const recipes = [
             "Drop rounded tablespoons onto ungreased baking sheets.",
             "Bake for 9-11 minutes until golden brown.",
             "Cool on baking sheet for 2 minutes, then transfer to wire rack."
+        ],
+        stepImages: [
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png"
         ]
     }
 ];
@@ -176,6 +205,9 @@ function showStep() {
     storyContent.innerHTML = `
         <h1>${currentRecipe.title} - Story Mode</h1>
         <div class="story-step active">
+            <div class="step-image-container">
+                <img src="${currentRecipe.stepImages[currentStep]}" alt="Step ${currentStep + 1}" class="step-image">
+            </div>
             <h2>Step ${currentStep + 1}</h2>
             <p>${currentRecipe.steps[currentStep]}</p>
         </div>

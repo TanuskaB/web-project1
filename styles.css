@@ -214,6 +214,23 @@ h1, h2, h3 {
     display: block;
 }
 
+.step-image-container {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-image {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
 .story-navigation {
     display: flex;
     justify-content: space-between;
@@ -292,11 +309,8 @@ footer {
     background: linear-gradient(135deg, pink 0%, rgb(231, 226, 129) 100%);
     color: black;
     text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    font-size: 10pt;
 }
 
 
