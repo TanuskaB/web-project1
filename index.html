@@ -9,10 +9,10 @@
 
     <title>Recipe Studio</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
-
 <body>
+    <div id="favoriteMessage" class="favorite-message"></div>
     <nav id="navbar">
         <div class="nav-container">
             <h1 class="logo">Recipe Studio</h1>
@@ -53,6 +53,24 @@
                     <h3>Chocolate Chip Cookies</h3>
                     <p>Classic homemade cookies that are soft and chewy.</p>
                 </div>
+
+                <div class="recipe-card" onclick="showRecipeDetail(3)">
+                    <img src="image/beef_tacos.png" alt="Beef Tacos">
+                    <h3>Beef Tacos</h3>
+                    <p>Quick weeknight tacos with seasoned ground beef.</p>
+                </div>
+
+                <div class="recipe-card" onclick="showRecipeDetail(4)">
+                    <img src="image/fluffy_pancake.png" alt="Fluffy Pancakes">
+                    <h3>Fluffy Pancakes</h3>
+                    <p>Soft, fluffy pancakes perfect for breakfast.</p>
+                </div>
+
+                <div class="recipe-card" onclick="showRecipeDetail(5)">
+                    <img src="image/caesar_salad.png" alt="Caesar Salad">
+                    <h3>Caesar Salad</h3>
+                    <p>Crisp romaine with creamy Caesar dressing and croutons.</p>
+                </div>
             </div>
         </section>
 
@@ -81,7 +99,7 @@
             <div id="recipeDetailContent">
                 <!-- Recipe details will be populated by JavaScript -->
             </div>
-            <button class="cta-button" onclick="startStoryMode()">Start Story Mode</button>
+            <button id="storyBtn" class="cta-button" onclick="startStoryMode()">Start Story Mode</button>
             <button class="favorite-btn" id="favoriteBtn" onclick="toggleFavorite()">Add to Favorites</button>
         </section>
 
@@ -124,9 +142,8 @@
         </section>
     </main>
 
-   
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 
     <footer>
         <p>&copy; 2026 Tanuska Biswakarma and Caira Major. All rights reserved.</p>
