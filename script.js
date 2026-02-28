@@ -21,6 +21,16 @@ const recipes = [
             "Mix pasta with pancetta, then add egg mixture off heat.",
             "Add reserved pasta water if needed for creaminess.",
             "Season with black pepper and serve immediately."
+        ],
+        stepImages: [
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png",
+            "image/spaghetti_carbonara.png"
+        
         ]
     },
     {
@@ -46,6 +56,16 @@ const recipes = [
             "Cook for another 2 minutes until vegetables are tender-crisp.",
             "Season with salt and pepper to taste.",
             "Serve hot with rice."
+        ],
+        stepImages: [
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png",
+            "image/chicken_stirfry.png"
+
         ]
     },
     {
@@ -94,6 +114,17 @@ const recipes = [
             "Shredded cheese",
             "Sour cream (optional)"
         ],
+        stepImages: [
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png",
+            "image/choco_cookies.png"
+            
         steps: [
             "Brown ground beef in a skillet; drain excess grease.",
             "Add taco seasoning and water; simmer 2–3 minutes.",
