@@ -21,15 +21,6 @@ const recipes = [
             "Mix pasta with pancetta, then add egg mixture off heat.",
             "Add reserved pasta water if needed for creaminess.",
             "Season with black pepper and serve immediately."
-        ],
-        stepImages: [
-            "image/spaghetti_carbonara.png",
-            "image/spaghetti_carbonara.png",
-            "image/spaghetti_carbonara.png",
-            "image/spaghetti_carbonara.png",
-            "image/spaghetti_carbonara.png",
-            "image/spaghetti_carbonara.png",
-            "image/spaghetti_carbonara.png"
         ]
     },
     {
@@ -55,15 +46,6 @@ const recipes = [
             "Cook for another 2 minutes until vegetables are tender-crisp.",
             "Season with salt and pepper to taste.",
             "Serve hot with rice."
-        ],
-        stepImages: [
-            "image/chicken_stirfry.png",
-            "image/chicken_stirfry.png",
-            "image/chicken_stirfry.png",
-            "image/chicken_stirfry.png",
-            "image/chicken_stirfry.png",
-            "image/chicken_stirfry.png",
-            "image/chicken_stirfry.png"
         ]
     },
     {
@@ -93,28 +75,85 @@ const recipes = [
             "Drop rounded tablespoons onto ungreased baking sheets.",
             "Bake for 9-11 minutes until golden brown.",
             "Cool on baking sheet for 2 minutes, then transfer to wire rack."
-        ],
-        stepImages: [
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png",
-            "image/choco_cookies.png"
         ]
-    }
-];
+    },
 
-// Current state
+    {
+        id: 3,
+        title: "Beef Tacos",
+        image: "image/beef_tacos.png",
+        imageAlt: "Beef Tacos",
+        description: "Quick weeknight tacos with seasoned ground beef.",
+        ingredients: [
+            "1 lb ground beef",
+            "1 tbsp taco seasoning",
+            "1/4 cup water",
+            "8 taco shells or tortillas",
+            "Shredded lettuce",
+            "Diced tomatoes",
+            "Shredded cheese",
+            "Sour cream (optional)"
+        ],
+        steps: [
+            "Brown ground beef in a skillet; drain excess grease.",
+            "Add taco seasoning and water; simmer 2–3 minutes.",
+            "Warm taco shells or tortillas.",
+            "Assemble tacos with beef and toppings.",
+            "Serve immediately."
+        ]
+},
+{
+        id: 4,
+        title: "Fluffy Pancakes",
+        image: "image/fluffy_pancake.png",
+        imageAlt: "Fluffy Pancakes",
+        description: "Soft, fluffy pancakes perfect for breakfast.",
+        ingredients: [
+            "1 1/2 cups all-purpose flour",
+            "3 1/2 tsp baking powder",
+            "1 tbsp sugar",
+            "1/2 tsp salt",
+            "1 1/4 cups milk",
+            "1 egg",
+            "3 tbsp melted butter",
+            "1 tsp vanilla (optional)"
+    ],
+        steps: [
+            "Whisk flour, baking powder, sugar, and salt in a bowl.",
+            "Whisk milk, egg, melted butter (and vanilla) in another bowl.",
+            "Combine wet into dry; mix just until combined (don’t overmix).",
+            "Cook 1/4 cup batter on a lightly greased pan over medium heat.",
+            "Flip when bubbles form; cook until golden.",
+            "Serve with syrup or fruit."
+    ]
+},
+{
+        id: 5,
+        title: "Caesar Salad",
+        image: "image/caesar_salad.png",
+        imageAlt: "Caesar Salad",
+        description: "Crisp romaine with creamy Caesar dressing and croutons.",
+        ingredients: [
+            "2 heads romaine lettuce, chopped",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan",
+            "1/3 cup Caesar dressing",
+            "Black pepper"
+    ],
+        steps: [
+            "Wash and chop romaine; pat dry.",
+            "Toss romaine with Caesar dressing.",
+            "Top with croutons, Parmesan, and black pepper.",
+            "Serve chilled."
+    ]
+}
+]
+
 let currentPage = 'home';
 let currentRecipe = null;
 let currentStep = 0;
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-// Navigation
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
@@ -132,27 +171,38 @@ function showPage(pageId) {
 function showRecipeDetail(recipeId) {
     currentRecipe = recipes.find(r => r.id === recipeId);
     const detailContent = document.getElementById('recipeDetailContent');
+
     detailContent.innerHTML = `
-        <div class="recipe-banner">
-            <img src="${currentRecipe.image}" alt="${currentRecipe.title}">
+    <div class="recipe-template">
+        <div class="recipe-top">
+            <div class="recipe-titleblock">
+                <h1>${currentRecipe.title}</h1>
+                <div class="recipe-subtitle">${currentRecipe.description}</div>
+            </div>
+            <div class="recipe-meta">
+            </div>
         </div>
-        <h1>${currentRecipe.title}</h1>
-        <p>${currentRecipe.description}</p>
-        <div class="ingredients-list">
-            <h2>Ingredients</h2>
-            <ul>
-                ${currentRecipe.ingredients.map(ing => `<li onclick="toggleIngredient(this)">${ing}</li>`).join('')}
-            </ul>
+        <img class="recipe-photo" src="${currentRecipe.image}" alt="${currentRecipe.title}">
+        <div class="recipe-bottom">
+            <div class="recipe-col ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    ${currentRecipe.ingredients.map(ing => `<li onclick="toggleIngredient(this)">${ing}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="recipe-col directions">
+                <h2>Directions</h2>
+                <ol>
+                    ${currentRecipe.steps.map(step => `<li>${step}</li>`).join('')}
+                </ol>
+            </div>
         </div>
-        <div class="instructions-list">
-            <h2>Instructions</h2>
-            <ol>
-                ${currentRecipe.steps.map(step => `<li>${step}</li>`).join('')}
-            </ol>
-        </div>
+    </div>
     `;
     updateFavoriteButton();
     showPage('recipe-detail');
+    const storyBtn = document.getElementById('storyBtn');
+    storyBtn.classList.add('pulse-btn');
 }
 
 function displayRecipes() {
@@ -170,9 +220,9 @@ function displayRecipes() {
 function displayFavorites() {
     const grid = document.getElementById('favoritesGrid');
     const noFavorites = document.getElementById('noFavorites');
-    
+
     const favoriteRecipes = recipes.filter(recipe => favorites.includes(recipe.id));
-    
+
     if (favoriteRecipes.length === 0) {
         grid.style.display = 'none';
         noFavorites.style.display = 'block';
@@ -190,8 +240,9 @@ function displayFavorites() {
     }
 }
 
-// Story Mode
 function startStoryMode() {
+    const storyBtn = document.getElementById('storyBtn');
+    storyBtn.classList.remove('pulse-btn');
     currentStep = 0;
     showStep();
     showPage('story-mode');
@@ -205,17 +256,34 @@ function showStep() {
     storyContent.innerHTML = `
         <h1>${currentRecipe.title} - Story Mode</h1>
         <div class="story-step active">
-            <div class="step-image-container">
-                <img src="${currentRecipe.stepImages[currentStep]}" alt="Step ${currentStep + 1}" class="step-image">
-            </div>
             <h2>Step ${currentStep + 1}</h2>
             <p>${currentRecipe.steps[currentStep]}</p>
         </div>
     `;
+        const stepElement = document.querySelector('.story-step');
+        stepElement.classList.remove('slide');
+        void stepElement.offsetWidth; 
+        stepElement.classList.add('slide');
 
     document.getElementById('progress').style.width = `${progress}%`;
     document.getElementById('prevStep').disabled = currentStep === 0;
-    document.getElementById('nextStep').textContent = currentStep === totalSteps - 1 ? 'Finish' : 'Next';
+    
+    const nextBtn = document.getElementById('nextStep');
+    if (currentStep === totalSteps - 1) {
+        nextBtn.textContent = 'Finish';
+        nextBtn.style.backgroundColor = '#27ae60';
+        nextBtn.style.color = 'white';
+        nextBtn.style.border = 'none';
+        nextBtn.style.padding = '10px 16px';
+        nextBtn.style.borderRadius = '8px';
+    } else {
+        nextBtn.textContent = 'Next';
+        nextBtn.style.backgroundColor = '';
+        nextBtn.style.color = '';
+        nextBtn.style.border = '';
+        nextBtn.style.padding = '';
+        nextBtn.style.borderRadius = '';
+    }
 }
 
 function nextStep() {
@@ -234,24 +302,44 @@ function prevStep() {
     }
 }
 
-// Ingredients interaction
 function toggleIngredient(element) {
     element.classList.toggle('checked');
 }
 
-// Favorites
+function showFavoriteMessage(text) {
+    const msg = document.getElementById('favoriteMessage');
+    if (!msg) return;
+
+    msg.textContent = text;
+    msg.classList.remove('show');
+    msg.classList.remove('shake');
+    void msg.offsetWidth;
+    msg.classList.add('show');
+    msg.classList.add('shake');
+
+    clearTimeout(window._favTimer);
+    window._favTimer = setTimeout(() => {
+        msg.classList.remove('show');
+        msg.classList.remove('shake');
+    }, 2000);
+}
+
 function toggleFavorite() {
     const index = favorites.indexOf(currentRecipe.id);
+
     if (index > -1) {
         favorites.splice(index, 1);
+        showFavoriteMessage("Removed from favorites");
     } else {
         favorites.push(currentRecipe.id);
+        showFavoriteMessage("Added to favorites");
     }
+
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoriteButton();
-    displayRecipes(); // Update the recipes list to show favorite indicators
+    displayRecipes();
     if (currentPage === 'favorites') {
-        displayFavorites(); // Update favorites page if currently viewing it
+        displayFavorites();
     }
 }
 
@@ -262,14 +350,12 @@ function updateFavoriteButton() {
     btn.classList.toggle('favorited', isFavorited);
 }
 
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Thank you for your message! We\'ll get back to you soon.');
     this.reset();
 });
 
-// Initialize
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     showPage('home');
 });
