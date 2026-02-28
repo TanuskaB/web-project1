@@ -452,9 +452,11 @@ footer {
     color: black;
     text-align: center;
     padding: 6px 10px;
-    font-size: 0.9rem;
+    font-size: 12px;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
 }
 

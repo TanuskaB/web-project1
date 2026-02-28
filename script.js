@@ -130,8 +130,16 @@ const recipes = [
             "Warm taco shells or tortillas.",
             "Assemble tacos with beef and toppings.",
             "Serve immediately."
+        ],
+        stepImages: [
+            "image/beef_tacos.png",
+            "image/beef_tacos.png",
+            "image/beef_tacos.png",
+            "image/beef_tacos.png",
+            "image/beef_tacos.png"
         ]
 },
+
 {
         id: 4,
         title: "Fluffy Pancakes",
@@ -155,8 +163,17 @@ const recipes = [
             "Cook 1/4 cup batter on a lightly greased pan over medium heat.",
             "Flip when bubbles form; cook until golden.",
             "Serve with syrup or fruit."
+    ],
+        stepImages: [
+            "image/fluffy_pancake.png",
+            "image/fluffy_pancake.png",
+            "image/fluffy_pancake.png",
+            "image/fluffy_pancake.png",
+            "image/fluffy_pancake.png",
+            "image/fluffy_pancake.png"
     ]
 },
+
 {
         id: 5,
         title: "Caesar Salad",
@@ -175,6 +192,12 @@ const recipes = [
             "Toss romaine with Caesar dressing.",
             "Top with croutons, Parmesan, and black pepper.",
             "Serve chilled."
+    ],
+        stepImages: [
+            "image/caesar_salad.png",
+            "image/caesar_salad.png",
+            "image/caesar_salad.png",
+            "image/caesar_salad.png"
     ]
 }
 ]
