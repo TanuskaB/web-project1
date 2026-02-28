@@ -124,7 +124,6 @@ const recipes = [
             "image/choco_cookies.png",
             "image/choco_cookies.png",
             "image/choco_cookies.png"
-<<<<<<< HEAD
         ]   
     },
 
@@ -143,10 +142,7 @@ const recipes = [
             "Diced tomatoes",
             "Shredded cheese",
             "Sour cream (optional)"
-        ],
-=======
->>>>>>> 12536323d739ed9648446a745d9c0fb08def40b6
-            
+        ],     
         steps: [
             "Brown ground beef in a skillet; drain excess grease.",
             "Add taco seasoning and water; simmer 2–3 minutes.",
