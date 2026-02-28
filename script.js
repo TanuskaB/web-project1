@@ -30,6 +30,7 @@ const recipes = [
             "image/spaghetti_carbonara.png",
             "image/spaghetti_carbonara.png",
             "image/spaghetti_carbonara.png"
+        
         ]
     },
     {
@@ -64,6 +65,7 @@ const recipes = [
             "image/chicken_stirfry.png",
             "image/chicken_stirfry.png",
             "image/chicken_stirfry.png"
+
         ]
     },
     {
@@ -104,6 +106,7 @@ const recipes = [
             "image/choco_cookies.png",
             "image/choco_cookies.png",
             "image/choco_cookies.png"
+            
         ]
     }
 ];
