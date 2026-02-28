@@ -95,6 +95,24 @@ const recipes = [
             "Drop rounded tablespoons onto ungreased baking sheets.",
             "Bake for 9-11 minutes until golden brown.",
             "Cool on baking sheet for 2 minutes, then transfer to wire rack."
+        ]
+    },
+
+    {
+        id: 3,
+        title: "Beef Tacos",
+        image: "image/beef_tacos.png",
+        imageAlt: "Beef Tacos",
+        description: "Quick weeknight tacos with seasoned ground beef.",
+        ingredients: [
+            "1 lb ground beef",
+            "1 tbsp taco seasoning",
+            "1/4 cup water",
+            "8 taco shells or tortillas",
+            "Shredded lettuce",
+            "Diced tomatoes",
+            "Shredded cheese",
+            "Sour cream (optional)"
         ],
         stepImages: [
             "image/choco_cookies.png",
@@ -106,6 +124,7 @@ const recipes = [
             "image/choco_cookies.png",
             "image/choco_cookies.png",
             "image/choco_cookies.png"
+<<<<<<< HEAD
         ]   
     },
 
@@ -125,6 +144,8 @@ const recipes = [
             "Shredded cheese",
             "Sour cream (optional)"
         ],
+=======
+>>>>>>> 12536323d739ed9648446a745d9c0fb08def40b6
             
         steps: [
             "Brown ground beef in a skillet; drain excess grease.",
