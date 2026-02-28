@@ -124,7 +124,25 @@ const recipes = [
             "image/choco_cookies.png",
             "image/choco_cookies.png",
             "image/choco_cookies.png"
-            
+        ]   
+    },
+
+    {
+        id: 3,
+        title: "Beef Tacos",
+        image: "image/beef_tacos.png",
+        imageAlt: "Beef Tacos",
+        description: "Quick weeknight tacos with seasoned ground beef.",
+        ingredients: [
+            "1 lb ground beef",
+            "1 tbsp taco seasoning",
+            "1/4 cup water",
+            "8 taco shells or tortillas",
+            "Shredded lettuce",
+            "Diced tomatoes",
+            "Shredded cheese",
+            "Sour cream (optional)"
+        ],     
         steps: [
             "Brown ground beef in a skillet; drain excess grease.",
             "Add taco seasoning and water; simmer 2–3 minutes.",
