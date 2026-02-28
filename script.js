@@ -282,11 +282,13 @@ function showStep() {
     const storyContent = document.getElementById('storyContent');
     const totalSteps = currentRecipe.steps.length;
     const progress = ((currentStep + 1) / totalSteps) * 100;
+    const stepImage = currentRecipe.stepImages[currentStep];
 
     storyContent.innerHTML = `
         <h1>${currentRecipe.title} - Story Mode</h1>
         <div class="story-step active">
             <h2>Step ${currentStep + 1}</h2>
+            ${stepImage ? `<img class="step-image" src="${stepImage}" alt="Step ${currentStep + 1}">` : ''}
             <p>${currentRecipe.steps[currentStep]}</p>
         </div>
     `;
