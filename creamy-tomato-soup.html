@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creamy Tomato Soup - Recipe Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Recipe Studio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="recipe-page">
+            <a href="recipes.html" class="back-link">← Back to Recipes</a>
+
+            <div class="recipe-header">
+                <img src="image/creamy_tomato_soup.png" alt="Creamy Tomato Soup">
+                <h1>Creamy Tomato Soup</h1>
+                <p>A warm and comforting tomato soup with a creamy texture.</p>
+            </div>
+
+            <div class="view-toggle">
+                <a href="#recipe-view" onclick="toggleView('recipe')">📖 View Recipe</a>
+                <a href="#story-1" onclick="toggleView('story')">📚 Story Mode</a>
+            </div>
+
+            <!-- Normal Recipe View -->
+            <div id="recipe-view" class="recipe-view">
+                <div class="recipe-ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>2 tbsp olive oil</li>
+                        <li>1 onion, chopped</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>800g canned crushed tomatoes</li>
+                        <li>2 cups vegetable broth</li>
+                        <li>1/2 cup heavy cream</li>
+                        <li>Salt</li>
+                        <li>Black pepper</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-directions">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Heat olive oil in a pot over medium heat.</li>
+                        <li>Sauté onion until soft.</li>
+                        <li>Add garlic and cook for 1 minute.</li>
+                        <li>Stir in crushed tomatoes and broth.</li>
+                        <li>Simmer for 15 minutes.</li>
+                        <li>Blend until smooth.</li>
+                        <li>Stir in cream, season, and serve warm.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Story Mode -->
+            <div class="story-mode" id="story-mode">
+                <div id="story-1" class="story-step">
+                    <h2>Step 1: Gather Your Ingredients</h2>
+                    <p>Prepare for a warm, comforting soup experience! You'll need 2 tablespoons of olive oil, 1 onion (chopped), 2 cloves of garlic (minced), 800g of canned crushed tomatoes, 2 cups of vegetable broth, 1/2 cup of heavy cream, salt, and black pepper. Let's create soup magic!</p>
+                    <div class="story-step-number">Step 1 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-2" class="story-step">
+                    <h2>Step 2: Heat the Oil</h2>
+                    <p>Pour 2 tablespoons of olive oil into a large pot and heat it over medium heat. Let it warm for about a minute. The oil will be ready when it shimmers slightly. You want it hot enough to cook but not smoking.</p>
+                    <div class="story-step-number">Step 2 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-1" class="story-nav-btn">← Previous</a>
+                        <a href="#story-3" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-3" class="story-step">
+                    <h2>Step 3: Sauté the Onion</h2>
+                    <p>Add your chopped onion to the hot oil. Stir occasionally and cook for about 5 minutes until the onion becomes soft and translucent. As it cooks, it will release its natural sugars and create a sweet, savory base for your soup!</p>
+                    <div class="story-step-number">Step 3 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">← Previous</a>
+                        <a href="#story-4" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-4" class="story-step">
+                    <h2>Step 4: Add Garlic</h2>
+                    <p>Add your minced garlic to the softened onion and stir constantly for about 1 minute. The garlic will become fragrant and golden. This combination of onion and garlic is the classic flavor foundation of countless soups!</p>
+                    <div class="story-step-number">Step 4 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-3" class="story-nav-btn">← Previous</a>
+                        <a href="#story-5" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-5" class="story-step">
+                    <h2>Step 5: Add Tomatoes and Broth</h2>
+                    <p>Pour 800g of canned crushed tomatoes and 2 cups of vegetable broth into the pot. Stir everything together and bring it to a simmer. The soup should bubble gently, not boil vigorously. Let it simmer for 15 minutes as flavors develop and deepen.</p>
+                    <div class="story-step-number">Step 5 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-4" class="story-nav-btn">← Previous</a>
+                        <a href="#story-6" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-6" class="story-step">
+                    <h2>Step 6: Blend Until Smooth</h2>
+                    <p>After 15 minutes of simmering, it's time to blend! Carefully transfer the soup to a blender (working in batches if needed) and blend until completely smooth. Or use an immersion blender directly in the pot. A smooth texture is the hallmark of creamy tomato soup!</p>
+                    <div class="story-step-number">Step 6 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-5" class="story-nav-btn">← Previous</a>
+                        <a href="#story-7" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-7" class="story-step">
+                    <h2>Step 7: Finish with Cream and Serve</h2>
+                    <p>Pour the blended soup back into the pot (if you transferred it). Stir in 1/2 cup of heavy cream, which adds richness and transforms the soup into something luxurious. Season with salt and black pepper to taste. Serve warm and enjoy the comfort of homemade tomato soup!</p>
+                    <div class="story-step-number">Step 7 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-6" class="story-nav-btn">← Previous</a>
+                        <a href="#recipe-view" class="story-nav-btn">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tanuska Biswakarma and Caira Major. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Pure HTML/CSS Story Mode Navigation
+        function toggleView(mode) {
+            const recipeView = document.getElementById('recipe-view');
+            const storyMode = document.getElementById('story-mode');
+            
+            if (mode === 'recipe') {
+                recipeView.classList.remove('hidden');
+                storyMode.classList.remove('active');
+            } else if (mode === 'story') {
+                recipeView.classList.add('hidden');
+                storyMode.classList.add('active');
+                document.location.hash = '#story-1';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Stir-Fry - Recipe Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Recipe Studio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="recipe-page">
+            <a href="recipes.html" class="back-link">← Back to Recipes</a>
+
+            <div class="recipe-header">
+                <img src="image/chicken_stirfry.png" alt="Chicken Stir-Fry">
+                <h1>Chicken Stir-Fry</h1>
+                <p>A quick and healthy Asian-inspired dish.</p>
+            </div>
+
+            <div class="view-toggle">
+                <a href="#recipe-view" onclick="toggleView('recipe')">📖 View Recipe</a>
+                <a href="#story-1" onclick="toggleView('story')">📚 Story Mode</a>
+            </div>
+
+            <!-- Normal Recipe View -->
+            <div id="recipe-view" class="recipe-view">
+                <div class="recipe-ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>400g chicken breast, sliced</li>
+                        <li>2 cups mixed vegetables (broccoli, bell peppers, carrots)</li>
+                        <li>2 tbsp soy sauce</li>
+                        <li>1 tbsp oyster sauce</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>1 tbsp vegetable oil</li>
+                        <li>Salt and pepper</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-directions">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Heat oil in a wok or large pan over high heat.</li>
+                        <li>Add chicken and stir-fry until cooked through.</li>
+                        <li>Add garlic and vegetables, stir-fry for 3-4 minutes.</li>
+                        <li>Add soy sauce and oyster sauce, mix well.</li>
+                        <li>Cook for another 2 minutes until vegetables are tender-crisp.</li>
+                        <li>Season with salt and pepper to taste.</li>
+                        <li>Serve hot with rice.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Story Mode -->
+            <div class="story-mode" id="story-mode">
+                <div id="story-1" class="story-step">
+                    <h2>Step 1: Prepare Your Ingredients</h2>
+                    <p>Slice 400g of chicken breast into bite-sized pieces. Prepare 2 cups of mixed vegetables—chop broccoli, bell peppers, and carrots into similar sizes so they cook evenly. Mince 2 cloves of garlic. Have soy sauce, oyster sauce, salt, pepper, and vegetable oil ready!</p>
+                    <div class="story-step-number">Step 1 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-2" class="story-step">
+                    <h2>Step 2: Heat Your Wok or Pan</h2>
+                    <p>Place a wok or large pan on your stove and heat it over high heat. Add 1 tablespoon of vegetable oil. Let it get hot until you see a slight shimmer—this ensures everything will cook quickly and evenly!</p>
+                    <div class="story-step-number">Step 2 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-1" class="story-nav-btn">← Previous</a>
+                        <a href="#story-3" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-3" class="story-step">
+                    <h2>Step 3: Cook the Chicken</h2>
+                    <p>Add the sliced chicken to the hot wok. Stir-fry it constantly for about 5-7 minutes until it's cooked completely. The chicken should be white/opaque throughout with no pink. Don't move it around too much—let it get a nice sear!</p>
+                    <div class="story-step-number">Step 3 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">← Previous</a>
+                        <a href="#story-4" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-4" class="story-step">
+                    <h2>Step 4: Add the Aromatics</h2>
+                    <p>Push the cooked chicken to the side of the wok. Add the minced garlic and stir-fry for about 30 seconds until fragrant. The aroma will be amazing—garlic is the soul of this dish!</p>
+                    <div class="story-step-number">Step 4 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-3" class="story-nav-btn">← Previous</a>
+                        <a href="#story-5" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-5" class="story-step">
+                    <h2>Step 5: Add the Vegetables</h2>
+                    <p>Turn up the heat to high and add your prepared vegetables. Stir-fry them constantly for 3-4 minutes. You want them to be colorful and tender-crisp—still with a slight crunch. Don't overcoil them!</p>
+                    <div class="story-step-number">Step 5 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-4" class="story-nav-btn">← Previous</a>
+                        <a href="#story-6" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-6" class="story-step">
+                    <h2>Step 6: Add the Sauce</h2>
+                    <p>Pour in 2 tablespoons of soy sauce and 1 tablespoon of oyster sauce. Mix everything well so the sauce coats all the chicken and vegetables. Let it cook for another 1-2 minutes as the flavors combine beautifully!</p>
+                    <div class="story-step-number">Step 6 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-5" class="story-nav-btn">← Previous</a>
+                        <a href="#story-7" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-7" class="story-step">
+                    <h2>Step 7: Season and Serve</h2>
+                    <p>Taste your creation and season with salt and pepper as needed. Serve immediately over steamed rice or noodles. This vibrant, healthy dish is packed with flavor and nutrition. Enjoy your homemade Asian-inspired stir-fry!</p>
+                    <div class="story-step-number">Step 7 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-6" class="story-nav-btn">← Previous</a>
+                        <a href="#recipe-view" class="story-nav-btn">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tanuska Biswakarma and Caira Major. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Pure HTML/CSS Story Mode Navigation
+        function toggleView(mode) {
+            const recipeView = document.getElementById('recipe-view');
+            const storyMode = document.getElementById('story-mode');
+            
+            if (mode === 'recipe') {
+                recipeView.classList.remove('hidden');
+                storyMode.classList.remove('active');
+            } else if (mode === 'story') {
+                recipeView.classList.add('hidden');
+                storyMode.classList.add('active');
+                document.location.hash = '#story-1';
+            }
+        }
+    </script>
+</body>
+</html>

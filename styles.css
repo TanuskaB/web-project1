@@ -139,6 +139,12 @@ h1, h2, h3 {
     color: #666;
 }
 
+.recipe-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .favorite-indicator {
     position: absolute;
     top: 10px;
@@ -146,7 +152,6 @@ h1, h2, h3 {
     color: #f39c12;
     font-size: 24px;
 }
-
 
 .recipe-grid {
     display: grid;
@@ -296,121 +301,189 @@ h1, h2, h3 {
 }
 
 /* Story mode */
-#story-mode {
-    background: white;
-    border-radius: 10px;
-    padding: 32px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.recipe-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.recipe-header {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 400px;
+}
+
+.recipe-header h1 {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+.recipe-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* View Mode Toggle */
+.view-toggle {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.view-toggle a {
+    padding: 12px 24px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.view-toggle a:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Normal Recipe View */
+.recipe-view {
+    display: block;
+}
+
+.recipe-view.hidden {
+    display: none;
+}
+
+.recipe-ingredients {
+    margin-bottom: 40px;
+}
+
+.recipe-ingredients h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #e74c3c;
+}
+
+.recipe-ingredients ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-ingredients li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    padding-left: 20px;
+    position: relative;
+}
+
+.recipe-ingredients li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.recipe-directions h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #e74c3c;
+}
+
+.recipe-directions ol {
+    padding-left: 20px;
+}
+
+.recipe-directions li {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Story Mode */
+.story-mode {
+    display: none;
+}
+
+.story-mode.active {
+    display: block;
 }
 
 .story-step {
     display: none;
+    background: linear-gradient(135deg, #f9f5f0 0%, #f0e9e1 100%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 32px;
 }
 
-.story-step.active {
+.story-step:target {
     display: block;
+}
+
+.story-step h2 {
+    font-size: 28px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.story-step p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.story-step-number {
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
 }
 
 .story-navigation {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 32px;
 }
 
-.progress-bar {
-    flex: 1;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 5px;
-    margin: 0 16px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
+.story-nav-btn {
+    padding: 12px 24px;
     background-color: #e74c3c;
-    transition: width 0.5s ease;
-}
-.story-chapter {
-    color:#888;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.story-text {
-    font-size: 18px;
-    line-height: 1.8;
-    background-color: white;
-    padding: 14px 16px;
-    border-radius: 10px;
-    border-left: 5px solid #e74c3c;
-    max-width: 700px;
-    margin: 0 auto;
-
-}
-.story-step{
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.story-step.active {
-    opacity: 1;
-    transform: translateY(0);
-
-}
-
-/* Step images in story mode */
-.step-image {
-    max-width: 100%;
-    max-height: 400px;
-    width: auto;
-    height: auto;
-    margin: 24px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Favorite button */
-.favorite-btn {
-    background-color: #f39c12;
     color: white;
-    border: none;
-    padding: 8px 16px;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 16px;
 }
 
-.favorite-btn.favorited {
-    background-color: #e74c3c;
+.story-nav-btn:hover {
+    background-color: #c0392b;
 }
 
-.favorite-message {
-    position: fixed;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 10px;
-    font-weight: bold;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    z-index: 9999;
+/* Show first step by default in story mode */
+.story-mode.active .story-step:first-child {
+    display: block;
 }
 
-.favorite-message.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-10px);
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    text-decoration: none;
 }
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 /* Contact form */
 #contactForm {
     display: flex;
@@ -461,22 +534,6 @@ footer {
 }
 
 
-/* Favorites page */
-.no-favorites {
-    text-align: center;
-    padding: 64px 32px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 32px;
-}
-
-.no-favorites p {
-    font-size: 18px;
-    margin-bottom: 32px;
-    color: #666;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
     .nav-container {
@@ -515,18 +572,6 @@ footer {
     }
 }
 
-/*Shake on Favorite Message */
-@keyframes shake {
-    0% { transform: translateX(-50%) translateY(-10px); }
-    25% { transform: translateX(calc(-50% - 6px)) translateY(-10px); }
-    50% { transform: translateX(calc(-50% + 6px)) translateY(-10px); }
-    75% { transform: translateX(calc(-50% - 4px)) translateY(-10px); }
-    100% { transform: translateX(-50%) translateY(-10px); }
-}
-
-.favorite-message.shake {
-    animation: shake 0.35s ease;
-}
 /* Pulse Animation */
 @keyframes glowPulse {
     0%   { box-shadow: 0 0 0 rgba(231, 76, 60, 0.35); transform: scale(1); }
