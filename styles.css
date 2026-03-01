@@ -468,12 +468,31 @@ h1, h2, h3 {
 .back-link {
     display: inline-block;
     margin-bottom: 20px;
-    color: #e74c3c;
+    color: #fff;
+    background: #e74c3c;
+    padding: 8px 14px;
+    border-radius: 8px;
     text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.18s ease;
+    font-weight: 600;
 }
 
-.back-link:hover {
-    text-decoration: underline;
+.back-link:hover,
+.back-link:focus {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(199,44,44,0.18);
+    outline: none;
+}
+
+.back-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.back-link:focus-visible {
+    box-shadow: 0 0 0 4px rgba(231,76,60,0.14);
 }
 
 
