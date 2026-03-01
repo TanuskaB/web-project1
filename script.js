@@ -108,6 +108,7 @@ const recipes = [
             "image/choco_cookies.png"
         ]
     },
+
     {
         id: 3,
         title: "Beef Tacos",
@@ -138,9 +139,9 @@ const recipes = [
             "image/beef_tacos.png",
             "image/beef_tacos.png"
         ]
-},
+    },
 
-{
+    {
         id: 4,
         title: "Fluffy Pancakes",
         image: "image/fluffy_pancake.png",
@@ -172,9 +173,9 @@ const recipes = [
             "image/fluffy_pancake.png",
             "image/fluffy_pancake.png"
     ]
-},
+    },
 
-{
+    {
         id: 5,
         title: "Caesar Salad",
         image: "image/caesar_salad.png",
@@ -199,7 +200,145 @@ const recipes = [
             "image/caesar_salad.png",
             "image/caesar_salad.png"
     ]
-}
+    },
+
+    {
+        id: 6,
+        title: "Vegetable Omelette",
+        image: "image/vegetable_omelette.png",
+        imageAlt: "Vegetable Omelette",
+        description: "A quick and healthy breakfast packed with fresh vegetables.",
+        ingredients: [
+            "3 eggs",
+            "1/4 cup bell peppers, diced",
+            "1/4 cup onions, diced",
+            "1/4 cup spinach",
+            "2 tbsp milk",
+            "Salt",
+            "Black pepper",
+            "1 tbsp butter"
+    ],
+        steps: [
+            "Whisk eggs, milk, salt, and pepper in a bowl.",
+            "Heat butter in a pan over medium heat.",
+            "Sauté vegetables for 2-3 minutes.",
+            "Pour egg mixture over vegetables.",
+            "Cook until edges set, then fold in half.",
+            "Cook another minute until done.",
+            "Serve warm."
+    ],
+        stepImages: [
+            "image/vegetable_omelette.png",
+            "image/vegetable_omelette.png",
+            "image/vegetable_omelette.png",
+            "image/vegetable_omelette.png",
+            "image/vegetable_omelette.png",
+            "image/vegetable_omelette.png",
+            "image/vegetable_omelette.png"
+    ]
+    },
+
+    {
+        id: 7,
+        title: "Margherita Pizza",
+        image: "image/margherita_pizza.png",
+        imageAlt: "Margherita Pizza",
+        description: "Classic Italian pizza topped with tomato sauce, mozzarella, and basil.",
+        ingredients: [
+            "1 pizza dough",
+            "1/2 cup tomato sauce",
+            "200g fresh mozzarella",
+            "Fresh basil leaves",
+            "1 tbsp olive oil",
+            "Salt"
+        ],
+        steps: [
+            "Preheat oven to 475°F (245°C).",
+            "Roll out pizza dough on a floured surface.",
+            "Spread tomato sauce evenly over dough.",
+            "Add sliced mozzarella.",
+            "Bake for 10-12 minutes until crust is golden.",
+            "Top with fresh basil and drizzle olive oil.",
+            "Slice and serve."
+        ],
+        stepImages: [
+            "image/margherita_pizza.png",
+            "image/margherita_pizza.png",
+            "image/margherita_pizza.png",
+            "image/margherita_pizza.png",
+            "image/margherita_pizza.png",
+            "image/margherita_pizza.png",
+            "image/margherita_pizza.png"
+        ]
+    },
+
+    {
+        id: 8,
+        title: "Banana Smoothie",
+        image: "image/banana_smoothie.png",
+        imageAlt: "Banana Smoothie",
+        description: "A creamy and refreshing smoothie perfect for breakfast or snacks.",
+        ingredients: [
+            "2 ripe bananas",
+            "1 cup milk",
+            "1/2 cup yogurt",
+            "1 tbsp honey",
+            "1/2 tsp vanilla extract",
+            "Ice cubes (optional)"
+        ],
+        steps: [
+            "Peel and slice bananas.",
+            "Add bananas, milk, yogurt, honey, and vanilla to blender.",
+            "Blend until smooth.",
+            "Add ice cubes if desired and blend again.",
+            "Pour into glasses.",
+            "Serve chilled."
+        ],
+        stepImages: [
+            "image/banana_smoothie.png",
+            "image/banana_smoothie.png",
+            "image/banana_smoothie.png",
+            "image/banana_smoothie.png",
+            "image/banana_smoothie.png",
+            "image/banana_smoothie.png"
+        ]
+    },
+
+    {
+    id: 9,
+    title: "Creamy Tomato Soup",
+    image: "image/creamy_tomato_soup.png",
+    imageAlt: "Creamy Tomato Soup",
+    description: "A warm and comforting tomato soup with a creamy texture.",
+    ingredients: [
+        "2 tbsp olive oil",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "800g canned crushed tomatoes",
+        "2 cups vegetable broth",
+        "1/2 cup heavy cream",
+        "Salt",
+        "Black pepper"
+    ],
+    steps: [
+        "Heat olive oil in a pot over medium heat.",
+        "Sauté onion until soft.",
+        "Add garlic and cook for 1 minute.",
+        "Stir in crushed tomatoes and broth.",
+        "Simmer for 15 minutes.",
+        "Blend until smooth.",
+        "Stir in cream, season, and serve warm."
+    ],
+    stepImages: [
+        "image/creamy_tomato_soup.png",
+        "image/creamy_tomato_soup.png",
+        "image/creamy_tomato_soup.png",
+        "image/creamy_tomato_soup.png",
+        "image/creamy_tomato_soup.png",
+        "image/creamy_tomato_soup.png",
+        "image/creamy_tomato_soup.png"
+    ]
+    }
 ]
 
 let currentPage = 'home';
