@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beef Tacos - Recipe Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Recipe Studio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="recipe-page">
+            <a href="recipes.html" class="back-link">← Back to Recipes</a>
+
+            <div class="recipe-header">
+                <img src="image/beef_tacos.png" alt="Beef Tacos">
+                <h1>Beef Tacos</h1>
+                <p>Quick weeknight tacos with seasoned ground beef.</p>
+            </div>
+
+            <div class="view-toggle">
+                <a href="#recipe-view" onclick="toggleView('recipe')">📖 View Recipe</a>
+                <a href="#story-1" onclick="toggleView('story')">📚 Story Mode</a>
+            </div>
+
+            <!-- Normal Recipe View -->
+            <div id="recipe-view" class="recipe-view">
+                <div class="recipe-ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>1 lb ground beef</li>
+                        <li>1 tbsp taco seasoning</li>
+                        <li>1/4 cup water</li>
+                        <li>8 taco shells or tortillas</li>
+                        <li>Shredded lettuce</li>
+                        <li>Diced tomatoes</li>
+                        <li>Shredded cheese</li>
+                        <li>Sour cream (optional)</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-directions">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Brown ground beef in a skillet; drain excess grease.</li>
+                        <li>Add taco seasoning and water; simmer 2–3 minutes.</li>
+                        <li>Warm taco shells or tortillas.</li>
+                        <li>Assemble tacos with beef and toppings.</li>
+                        <li>Serve immediately.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Story Mode -->
+            <div class="story-mode" id="story-mode">
+                <div id="story-1" class="story-step">
+                    <h2>Step 1: Prepare Your Taco Station</h2>
+                    <p>Gather all your ingredients and toppings. You'll need 1 pound of ground beef, taco seasoning, water, taco shells or tortillas, shredded lettuce, diced tomatoes, shredded cheese, and sour cream. Arrange the toppings in small bowls on your counter for easy assembly!</p>
+                    <div class="story-step-number">Step 1 of 5</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-2" class="story-step">
+                    <h2>Step 2: Brown the Ground Beef</h2>
+                    <p>Heat a large skillet over medium-high heat. Add 1 pound of ground beef and cook until browned, breaking it up into crumbles as it cooks. This should take about 5-7 minutes. Once fully cooked, drain the excess grease using a colander or by tilting the pan carefully.</p>
+                    <div class="story-step-number">Step 2 of 5</div>
+                    <div class="story-navigation">
+                        <a href="#story-1" class="story-nav-btn">← Previous</a>
+                        <a href="#story-3" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-3" class="story-step">
+                    <h2>Step 3: Season the Beef</h2>
+                    <p>Return the drained beef to the skillet. Add 1 tablespoon of taco seasoning and 1/4 cup of water. Stir well and let it simmer for 2-3 minutes. The sauce will be absorbed into the meat, making it flavory and delicious!</p>
+                    <div class="story-step-number">Step 3 of 5</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">← Previous</a>
+                        <a href="#story-4" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-4" class="story-step">
+                    <h2>Step 4: Warm Your Shells</h2>
+                    <p>While the beef simmers, warm your taco shells or tortillas. You can do this in the oven at 350°F for a few minutes, or warm tortillas in a skillet for 30 seconds on each side. Warm shells are crucial for the perfect taco experience!</p>
+                    <div class="story-step-number">Step 4 of 5</div>
+                    <div class="story-navigation">
+                        <a href="#story-3" class="story-nav-btn">← Previous</a>
+                        <a href="#story-5" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-5" class="story-step">
+                    <h2>Step 5: Assemble and Serve</h2>
+                    <p>Now the fun part! Fill each warm shell with seasoned beef, then add your favorite toppings: shredded lettuce, diced tomatoes, shredded cheese, and a dollop of sour cream. Serve immediately while everything is warm. Tacos are best enjoyed fresh and hot!</p>
+                    <div class="story-step-number">Step 5 of 5</div>
+                    <div class="story-navigation">
+                        <a href="#story-4" class="story-nav-btn">← Previous</a>
+                        <a href="#recipe-view" class="story-nav-btn">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tanuska Biswakarma and Caira Major. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Pure HTML/CSS Story Mode Navigation
+        function toggleView(mode) {
+            const recipeView = document.getElementById('recipe-view');
+            const storyMode = document.getElementById('story-mode');
+            
+            if (mode === 'recipe') {
+                recipeView.classList.remove('hidden');
+                storyMode.classList.remove('active');
+            } else if (mode === 'story') {
+                recipeView.classList.add('hidden');
+                storyMode.classList.add('active');
+                document.location.hash = '#story-1';
+            }
+        }
+    </script>
+</body>
+</html>

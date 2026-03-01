@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Spaghetti Carbonara - Recipe Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Recipe Studio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="recipe-page">
+            <a href="recipes.html" class="back-link">← Back to Recipes</a>
+
+            <div class="recipe-header">
+                <img src="image/spaghetti_carbonara.png" alt="Spaghetti Carbonara">
+                <h1>Classic Spaghetti Carbonara</h1>
+                <p>A traditional Italian pasta dish that's quick and delicious.</p>
+            </div>
+
+            <div class="view-toggle">
+                <a href="#recipe-view" onclick="toggleView('recipe')">📖 View Recipe</a>
+                <a href="#story-1" onclick="toggleView('story')">📚 Story Mode</a>
+            </div>
+
+            <!-- Normal Recipe View -->
+            <div id="recipe-view" class="recipe-view">
+                <div class="recipe-ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>200g spaghetti</li>
+                        <li>100g pancetta or bacon</li>
+                        <li>2 large eggs</li>
+                        <li>50g grated Parmesan cheese</li>
+                        <li>Black pepper</li>
+                        <li>Salt</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-directions">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Cook spaghetti in salted boiling water until al dente.</li>
+                        <li>Fry pancetta in a pan until crispy.</li>
+                        <li>Whisk eggs and Parmesan in a bowl.</li>
+                        <li>Drain pasta, reserving some water.</li>
+                        <li>Mix pasta with pancetta, then add egg mixture off heat.</li>
+                        <li>Add reserved pasta water if needed for creaminess.</li>
+                        <li>Season with black pepper and serve immediately.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Story Mode -->
+            <div class="story-mode" id="story-mode">
+                <div id="story-1" class="story-step">
+                    <h2>Step 1: Prepare Your Ingredients</h2>
+                    <p>Gather all your ingredients. You'll need 200g spaghetti, 100g pancetta or bacon, 2 large eggs, 50g grated Parmesan cheese, black pepper, and salt. Having everything ready will make the cooking process smooth and enjoyable!</p>
+                    <div class="story-step-number">Step 1 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-2" class="story-step">
+                    <h2>Step 2: Boil the Water</h2>
+                    <p>Fill a large pot with water and bring it to a boil. Add a generous pinch of salt to the water—it should taste like the sea! This will season your pasta perfectly.</p>
+                    <div class="story-step-number">Step 2 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-1" class="story-nav-btn">← Previous</a>
+                        <a href="#story-3" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-3" class="story-step">
+                    <h2>Step 3: Cook the Spaghetti</h2>
+                    <p>Add 200g of spaghetti to the boiling water. Stir occasionally and cook until al dente—tender but still with a slight firmness when you bite it. This usually takes about 8-10 minutes. Avoid overcooking!</p>
+                    <div class="story-step-number">Step 3 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">← Previous</a>
+                        <a href="#story-4" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-4" class="story-step">
+                    <h2>Step 4: Fry the Pancetta</h2>
+                    <p>While the pasta cooks, cut 100g of pancetta or bacon into small pieces and fry them in a pan over medium heat until they become crispy and golden. The rendered fat will add wonderful flavor to your dish!</p>
+                    <div class="story-step-number">Step 4 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-3" class="story-nav-btn">← Previous</a>
+                        <a href="#story-5" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-5" class="story-step">
+                    <h2>Step 5: Make the Sauce</h2>
+                    <p>In a bowl, whisk together 2 large eggs and 50g of grated Parmesan cheese. This will create a creamy, luxurious sauce for your pasta. The heat from the pasta will cook the eggs without scrambling them!</p>
+                    <div class="story-step-number">Step 5 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-4" class="story-nav-btn">← Previous</a>
+                        <a href="#story-6" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-6" class="story-step">
+                    <h2>Step 6: Combine Everything</h2>
+                    <p>Drain the pasta, reserving a cup of pasta water. In a large pan (off heat), combine the pasta and crispy pancetta. Pour the egg mixture over the pasta and toss quickly and gently. If needed, add a splash of pasta water to create a creamy consistency.</p>
+                    <div class="story-step-number">Step 6 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-5" class="story-nav-btn">← Previous</a>
+                        <a href="#story-7" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-7" class="story-step">
+                    <h2>Step 7: Plate and Serve</h2>
+                    <p>Season with plenty of fresh black pepper and taste for salt. Divide into bowls and serve immediately while the pasta is hot and creamy. This is an authentic Carbonara—buon appetito! Enjoy this delicious Italian classic!</p>
+                    <div class="story-step-number">Step 7 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-6" class="story-nav-btn">← Previous</a>
+                        <a href="#recipe-view" class="story-nav-btn">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tanuska Biswakarma and Caira Major. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Pure HTML/CSS Story Mode Navigation
+        function toggleView(mode) {
+            const recipeView = document.getElementById('recipe-view');
+            const storyMode = document.getElementById('story-mode');
+            
+            if (mode === 'recipe') {
+                recipeView.classList.remove('hidden');
+                storyMode.classList.remove('active');
+            } else if (mode === 'story') {
+                recipeView.classList.add('hidden');
+                storyMode.classList.add('active');
+                document.location.hash = '#story-1';
+            }
+        }
+    </script>
+</body>
+</html>

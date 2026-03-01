@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margherita Pizza - Recipe Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Recipe Studio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="recipe-page">
+            <a href="recipes.html" class="back-link">← Back to Recipes</a>
+
+            <div class="recipe-header">
+                <img src="image/margherita_pizza.png" alt="Margherita Pizza">
+                <h1>Margherita Pizza</h1>
+                <p>Classic Italian pizza topped with tomato sauce, mozzarella, and basil.</p>
+            </div>
+
+            <div class="view-toggle">
+                <a href="#recipe-view" onclick="toggleView('recipe')">📖 View Recipe</a>
+                <a href="#story-1" onclick="toggleView('story')">📚 Story Mode</a>
+            </div>
+
+            <!-- Normal Recipe View -->
+            <div id="recipe-view" class="recipe-view">
+                <div class="recipe-ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>1 pizza dough</li>
+                        <li>1/2 cup tomato sauce</li>
+                        <li>200g fresh mozzarella</li>
+                        <li>Fresh basil leaves</li>
+                        <li>1 tbsp olive oil</li>
+                        <li>Salt</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-directions">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Preheat oven to 475°F (245°C).</li>
+                        <li>Roll out pizza dough on a floured surface.</li>
+                        <li>Spread tomato sauce evenly over dough.</li>
+                        <li>Add sliced mozzarella.</li>
+                        <li>Bake for 10-12 minutes until crust is golden.</li>
+                        <li>Top with fresh basil and drizzle olive oil.</li>
+                        <li>Slice and serve.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Story Mode -->
+            <div class="story-mode" id="story-mode">
+                <div id="story-1" class="story-step">
+                    <h2>Step 1: Gather Your Ingredients</h2>
+                    <p>Prepare for an authentic Italian pizza experience! You'll need 1 ball of pizza dough, 1/2 cup tomato sauce, 200g fresh mozzarella, fresh basil leaves, olive oil, and salt. These simple, quality ingredients are the secret to a classic Margherita!</p>
+                    <div class="story-step-number">Step 1 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-2" class="story-step">
+                    <h2>Step 2: Preheat Your Oven</h2>
+                    <p>Turn on your oven and set it to 475°F (245°C). Let it preheat for about 15-20 minutes until it reaches the proper temperature. A hot oven is essential for creating a crispy crust with a soft, chewy interior!</p>
+                    <div class="story-step-number">Step 2 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-1" class="story-nav-btn">← Previous</a>
+                        <a href="#story-3" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-3" class="story-step">
+                    <h2>Step 3: Prepare the Dough</h2>
+                    <p>Dust a clean work surface with flour. Take your pizza dough and gently stretch and roll it out into a circle about 12-14 inches wide. The dough should be thin but sturdy enough to hold the toppings. If the dough springs back, let it rest for a minute, then try again.</p>
+                    <div class="story-step-number">Step 3 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-2" class="story-nav-btn">← Previous</a>
+                        <a href="#story-4" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-4" class="story-step">
+                    <h2>Step 4: Add the Sauce</h2>
+                    <p>Place your rolled dough on a pizza pan or baking stone. Spread 1/2 cup of tomato sauce evenly over the dough, leaving a small border around the edges for the crust. Don't overload with sauce—this is a simple pizza where each ingredient shines!</p>
+                    <div class="story-step-number">Step 4 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-3" class="story-nav-btn">← Previous</a>
+                        <a href="#story-5" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-5" class="story-step">
+                    <h2>Step 5: Add the Cheese</h2>
+                    <p>Slice or tear 200g of fresh mozzarella into bite-sized pieces. Distribute the mozzarella evenly over the tomato sauce, but don't cover every inch—leave some sauce visible. This creates pockets of cheese and sauce that flavor every bite!</p>
+                    <div class="story-step-number">Step 5 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-4" class="story-nav-btn">← Previous</a>
+                        <a href="#story-6" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-6" class="story-step">
+                    <h2>Step 6: Bake the Pizza</h2>
+                    <p>Carefully place your pizza in the preheated oven. Bake for 10-12 minutes until the crust is golden brown and the cheese is bubbling at the edges. Your kitchen will smell absolutely amazing! Keep an eye on it to prevent burning.</p>
+                    <div class="story-step-number">Step 6 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-5" class="story-nav-btn">← Previous</a>
+                        <a href="#story-7" class="story-nav-btn">Next Step →</a>
+                    </div>
+                </div>
+
+                <div id="story-7" class="story-step">
+                    <h2>Step 7: Finish and Serve</h2>
+                    <p>Remove the pizza from the oven (carefully—it's hot!). Immediately top it with fresh basil leaves and drizzle with 1 tablespoon of good olive oil. Let it cool for a minute, then slice and serve. This authentic Margherita pizza is pizza perfection!</p>
+                    <div class="story-step-number">Step 7 of 7</div>
+                    <div class="story-navigation">
+                        <a href="#story-6" class="story-nav-btn">← Previous</a>
+                        <a href="#recipe-view" class="story-nav-btn">View Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tanuska Biswakarma and Caira Major. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Pure HTML/CSS Story Mode Navigation
+        function toggleView(mode) {
+            const recipeView = document.getElementById('recipe-view');
+            const storyMode = document.getElementById('story-mode');
+            
+            if (mode === 'recipe') {
+                recipeView.classList.remove('hidden');
+                storyMode.classList.remove('active');
+            } else if (mode === 'story') {
+                recipeView.classList.add('hidden');
+                storyMode.classList.add('active');
+                document.location.hash = '#story-1';
+            }
+        }
+    </script>
+</body>
+</html>
