@@ -15,21 +15,21 @@ body {
 header {
     background: #ff7043;
     color: white;
-    padding: 1rem;
+    padding: 16px;
     text-align: center;
 }
 
 .board {
     display: flex;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 16px;
+    padding: 16px;
     overflow-x: auto;
 }
 
 .column {
     background: #ffffff;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 16px;
     min-width: 280px;
     flex: 1;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -42,8 +42,8 @@ header {
 
 .card {
     background: #ffe0b2;
-    padding: 0.8rem;
-    margin-bottom: 0.8rem;
+    padding: 13px;
+    margin-bottom: 13px;
     border-radius: 8px;
     cursor: grab;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -60,8 +60,8 @@ header {
 
 footer {
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 16px;
+    font-size: 14px;
     background: #fff;
 }
 
@@ -94,7 +94,6 @@ footer {
 
     <div class="column" data-column="inprogress">
         <h2>In Progress</h2>
-        <div class="card" draggable="true">Build Story Mode transitions</div>
         <div class="card" draggable="true">Add animations & hover effects</div>
         <div class="card" draggable="true">Plan layout and wireframe</div>
         <div class="card" draggable="true">Design Homepage UI</div>
@@ -116,73 +115,6 @@ footer {
 <footer>
     Track A: Recipe Studio | Extension: Story Pack | Bonus: Favorite Recipes
 </footer>
-
-<script>
-const cards = document.querySelectorAll('.card');
-const columns = document.querySelectorAll('.column');
-
-cards.forEach(card => {
-    card.addEventListener('dragstart', () => {
-        card.classList.add('dragging');
-    });
-
-    card.addEventListener('dragend', () => {
-        card.classList.remove('dragging');
-        saveBoard();
-    });
-});
-
-columns.forEach(column => {
-    column.addEventListener('dragover', e => {
-        e.preventDefault();
-        const dragging = document.querySelector('.dragging');
-        column.appendChild(dragging);
-    });
-});
-
-function saveBoard() {
-    const boardData = {};
-    columns.forEach(column => {
-        const columnName = column.dataset.column;
-        const cards = column.querySelectorAll('.card');
-        boardData[columnName] = [];
-        cards.forEach(card => {
-            boardData[columnName].push(card.textContent);
-        });
-    });
-    localStorage.setItem('kanbanBoard', JSON.stringify(boardData));
-}
-
-function loadBoard() {
-    const data = JSON.parse(localStorage.getItem('kanbanBoard'));
-    if (!data) return;
-
-    columns.forEach(column => {
-        const columnName = column.dataset.column;
-        column.querySelectorAll('.card').forEach(card => card.remove());
-
-        data[columnName].forEach(text => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.textContent = text;
-            card.setAttribute('draggable', true);
-
-            card.addEventListener('dragstart', () => {
-                card.classList.add('dragging');
-            });
-
-            card.addEventListener('dragend', () => {
-                card.classList.remove('dragging');
-                saveBoard();
-            });
-
-            column.appendChild(card);
-        });
-    });
-}
-
-loadBoard();
-</script>
 
 </body>
 </html>
