@@ -292,6 +292,28 @@ h1, h2, h3 {
     color: #999;
 }
 
+/* Add a box around the ingredients and directions */
+.recipe-ingredients, .recipe-directions {
+    border: 2px solid #ccc;          
+    padding: 20px;                   
+    margin-bottom: 20px;             
+    border-radius: 8px;             
+    background-color: #f9f9f9;      
+    transition: all 0.3s ease;       
+}
+
+/* Hover effect */
+.recipe-ingredients:hover, .recipe-directions:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);     
+}
+
+.recipe-ingredients h2, .recipe-directions h2 {
+    margin-top: 0;             
+    font-size: 1.5em;           
+    color: #333;                 
+}
+
 /* Story mode */
 .recipe-page {
     max-width: 900px;
@@ -465,6 +487,7 @@ h1, h2, h3 {
     display: block;
 }
 
+/* Back link button */
 .back-link {
     display: inline-block;
     margin-bottom: 20px;
