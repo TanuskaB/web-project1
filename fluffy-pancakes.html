@@ -29,6 +29,7 @@
                 <p>Soft, fluffy pancakes perfect for breakfast.</p>
             </div>
 
+
             <div class="view-toggle">
                 <a href="#recipe-view" onclick="toggleView('recipe')">📖 View Recipe</a>
                 <a href="#story-1" onclick="toggleView('story')" class="pulse-btn">📚 Story Mode</a>
@@ -126,7 +127,17 @@
                     <div class="story-step-number">Step 6 of 6</div>
                     <div class="story-navigation">
                         <a href="#story-5" class="story-nav-btn">← Previous</a>
-                        <a href="#recipe-view" class="story-nav-btn">View Full Recipe</a>
+                        <a href="#story-complete" class="story-nav-btn">Finish →</a>
+                    </div>
+                </div>
+
+                <div id="story-complete" class="story-step" style="--index:6">
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                    <h2> Recipe Completed!</h2>
+                    <p>You finished the story mode. Ready to make another batch?</p>
+                    <div class="story-navigation">
+                        <a href="#story-1" class="story-nav-btn">🔄 Start Again</a>
+                        <a href="fluffy-pancakes.html" class="story-nav-btn">📖 View Full Recipe</a>
                     </div>
                 </div>
             </div>
