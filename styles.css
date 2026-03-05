@@ -488,10 +488,15 @@ h1, h2, h3 {
     background-color: #c0392b;
 }
 
-/* Show first step by default in story mode */
-.story-mode.active .story-step:first-child {
-    display: block;
+/* Hide top buttons when story mode is active */
+.recipe-page:has(.story-step:target) .view-toggle {
+    display: none;
 }
+
+/* Show first step by default in story mode */
+.story-step { display: none; }
+.story-step:target { display: block; }
+
 
 /* Back link button */
 .back-link {
@@ -653,4 +658,20 @@ footer {
 
 .story-step.slide {
     animation: slideInStep 0.4s ease;
+}
+/* Shake Animation on Finish Button */
+.finish-btn {
+    display: inline-block;
+    transition: transform 0.2 ease;
+}
+
+.finish-btn:hover {
+    animation: rock 0.4s ease;
+}
+
+@keyframes rock {
+    0% {transform: rotate(0deg); }
+    30% {transform: rotate(-2deg); }
+    60% {transform: rotate(2deg); }
+    100% {transform: rotate(0deg); }
 }
