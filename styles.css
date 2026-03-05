@@ -488,9 +488,15 @@ h1, h2, h3 {
     background-color: #c0392b;
 }
 
+/* Hide top buttons when story mode is active */
+.recipe-page:has(.story-step:target) .view-toggle {
+    display: none;
+}
+
 /* Show first step by default in story mode */
 .story-step { display: none; }
 .story-step:target { display: block; }
+
 
 /* Back link button */
 .back-link {
