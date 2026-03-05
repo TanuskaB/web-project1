@@ -659,3 +659,19 @@ footer {
 .story-step.slide {
     animation: slideInStep 0.4s ease;
 }
+/* Shake Animation on Finish Button */
+.finish-btn {
+    display: inline-block;
+    transition: transform 0.2 ease;
+}
+
+.finish-btn:hover {
+    animation: rock 0.4s ease;
+}
+
+@keyframes rock {
+    0% {transform: rotate(0deg); }
+    30% {transform: rotate(-2deg); }
+    60% {transform: rotate(2deg); }
+    100% {transform: rotate(0deg); }
+}
