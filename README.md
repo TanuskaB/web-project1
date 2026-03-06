@@ -4,6 +4,6 @@ This project is designed to promote a dynamic and engaging learning experience t
 # Deployement
 In order to deploy this website simple go to any browser and copy & paster the link below:
 
-Link: https://codd.cs.gsu.edu/~tbiswakarma1/wp/project/Tanuska_Biswakarma_Recipe_Studio/chicken-stir-fry.html
+Link: https://codd.cs.gsu.edu/~tbiswakarma1/wp/project/Tanuska_Biswakarma_Recipe_Studio/index.html
 
 
